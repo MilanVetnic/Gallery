@@ -1,0 +1,115 @@
+
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.main-container {
+  display: block;
+  margin: 0 auto;
+  max-width: 64rem;
+  transition: 0.25s cubic-bezier(0.5, 0, 0.2, 1);
+}
+.content-container {
+  padding: 2rem;
+}
+.data-container {
+  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.data {
+  min-width: 5rem;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  background-color: #edeeee;
+}
+.img-section {
+  padding: 2rem 0;
+  display: block;
+}
+.img-grid {
+  gap: 1rem;
+  display: grid;
+  margin: 0 auto;
+  max-width: calc(16rem * 3 + 1rem * 2);
+  grid-template: "i1 i2 i2" 16rem "i3 i3 i6" 16rem "i4 i5 i6" 16rem "i7 i8 i9" 16rem "i7 i10 i10" 16rem "i11 i11 i11" 16rem;
+}
+.img {
+  border-radius: 0.375rem;
+  background-size: cover;
+  background-position: center;
+  background-color: #cccccc;
+}
+
+
+.img:nth-child(1) {
+  grid-area: i1;
+  background-image: url("photos/shot.png");
+}
+.img:nth-child(2) {
+  grid-area: i2;
+  background-image: url("photos/c-town.jpg");
+}
+.img:nth-child(3) {
+  grid-area: i3;
+  background-image: url("photos/street-piano.jpg");
+}
+.img:nth-child(4) {
+  grid-area: i4;
+  background-image: url("photos/neon-lights.jpg");
+}
+.img:nth-child(5) {
+  grid-area: i5;
+  background-image: url("photos/pug.jpg");
+}
+.img:nth-child(6) {
+  grid-area: i6;
+  background-image: url("photos/speakers-up.jpg");
+}
+.img:nth-child(7) {
+  grid-area: i7;
+  background-image: url("photos/favorit.jpg");
+}
+.img:nth-child(8) {
+  grid-area: i8;
+  background-image: url("photos/profile.jpg");
+}
+.img:nth-child(9) {
+  grid-area: i9;
+  background-image: url("photos/icebox.jpg");
+}
+.img:nth-child(10) {
+  grid-area: i10;
+  background-image: url("photos/lens.jpg");
+}
+.img:nth-child(11) {
+  grid-area: i11;
+  background-image: url("photos/cassette.jpg");
+}
+
+.img:hover {
+  opacity: 0.9;
+  transition: .4s;
+}
+
+@media only screen and (max-width: 640px) {
+.content-container {
+  padding: 0 2rem;
+}
+.img-grid {
+  max-width: calc(16rem * 2);
+  grid-template: "i1" 16rem "i2" 16rem "i3" 16rem "i4" 16rem "i5" 16rem "i6" 16rem "i7" 16rem "i8" 16rem "i9" 16rem "i10" 16rem "i11" 16rem;
+  }
+}
